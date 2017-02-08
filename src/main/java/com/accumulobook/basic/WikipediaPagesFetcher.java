@@ -29,7 +29,7 @@ public class WikipediaPagesFetcher {
 
     String pagesString = Joiner.on("%0A").join(pages);
     
-    URL url = new URL("http://en.wikipedia.org/w/index.php?title=Special:Export&pages=" + pagesString + "&curonly&action=submit");
+    URL url = new URL("https://en.wikipedia.org/w/index.php?title=Special:Export&pages=" + pagesString + "&curonly&action=submit");
     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
     conn.setRequestMethod("POST");
